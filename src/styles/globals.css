@@ -5,11 +5,3 @@
 * {
     color: #3A5064;
 }
-
-.invert {
-    -webkit-filter: invert(1);
-    -moz-filter: invert(1);
-    -ms-filter: invert(1);
-    -o-filter: invert(1);
-    filter: invert(1);
-}

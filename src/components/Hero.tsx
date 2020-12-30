@@ -20,18 +20,17 @@ const Hero: React.FC<dataProps> = ({ header, content, cta, src }) => {
           </button>
         </div>
       </div>
-      <div className="flex w-full bg-starmap relative bg-clip-content text-center border-8 border-black">
+      <div className="flex w-full bg-starmap relative bg-clip-content text-center border-8 border-black invisible md:visible">
         <div className="absolute w-full h-full bg-hero bg-center starmap-circle rounded-full border-2 border-white"></div>
         <div className="flex-auto bg-starmap p-2">
           <div className="flex h-full bg-white p-0.5">
             <div className="flex w-full bg-starmap items-end">
-              <div className="w-full text-white text-2xs font-thin whitespace-pre-line uppercase mb-5" >
-              <p className="text-white">A TWINKLE IN TIME</p>
-              <p className="text-white">DECEMBER 29, 2020</p>
-              <p className="text-white">NEW YORK, NY, USA</p>
-              <p className="text-white">40.713°N/74.006°W</p>
+              <div className="w-full text-white text-2xs font-thin whitespace-pre-line uppercase mb-5">
+                <p className="text-white">A TWINKLE IN TIME</p>
+                <p className="text-white">DECEMBER 29, 2020</p>
+                <p className="text-white">NEW YORK, NY, USA</p>
+                <p className="text-white">40.713°N/74.006°W</p>
               </div>
-
             </div>
           </div>
         </div>

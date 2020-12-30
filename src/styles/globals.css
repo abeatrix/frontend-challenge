@@ -5,3 +5,11 @@
 * {
     color: #3A5064;
 }
+
+.starmap-circle {
+    top: 8%;
+    width: 75%;
+    height: 60%;
+    z-index: 50;
+    left: 13%;
+}

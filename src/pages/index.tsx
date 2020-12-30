@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .post("http://localhost:3000/api/cms")
+      .get("./api/cms")
       .then((response) => {
         setData(response.data), setFetched(true);
       })

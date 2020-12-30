@@ -1,10 +1,11 @@
 import React from "react";
 
 export default function Hero({ src }) {
+
   return (
     <div className="flex space-x-0 p-2 max-w-screen-md">
       <div className="grid grid-cols-3">
-        <div className="col-span-2 h-full p-3">
+        <div className="col-span-2 h-full p-5 md:pr-44">
           <p className="font-sans text-base md:text-4xl font-extrabold">
             Your Custom Star Map
           </p>
@@ -19,10 +20,9 @@ export default function Hero({ src }) {
             </button>
           </div>
         </div>
+        <div className="flex p-2 bg-black">
+        <img alt="image" src={src} className="object-cover w-full" />
       </div>
-
-      <div className="flex-none w-1/3 relative p-2 bg-black">
-        <img alt="image" src={src} className="object-cover" />
       </div>
     </div>
   );

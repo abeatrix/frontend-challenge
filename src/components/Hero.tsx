@@ -6,7 +6,6 @@ interface dataProps {
 }
 
 const Hero: React.FC<dataProps> = ({ header, content, cta, src }) => {
-
   return (
     <div className="flex space-x-0 p-2 max-w-screen-md">
       <div className="grid grid-cols-3">
@@ -30,6 +29,6 @@ const Hero: React.FC<dataProps> = ({ header, content, cta, src }) => {
       </div>
     </div>
   );
-}
+};
 
-export default Hero
+export default Hero;

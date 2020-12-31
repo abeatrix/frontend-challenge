@@ -7,7 +7,7 @@ interface dataProps {
 
 const Hero: React.FC<dataProps> = ({ header, content, cta, src }) => {
   return (
-    <div className=" relative mh-1/3 flex items-center justify-center">
+    <div className=" relative mh-1/3 h-full flex md:items-center justify-center">
       <video
         className="object-cover w-full h-full bg-black z-0"
         autoPlay
@@ -21,17 +21,17 @@ const Hero: React.FC<dataProps> = ({ header, content, cta, src }) => {
             <p className="font-sans text-xl sm:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-white">
               {header}
             </p>
-            <p className="pt-2 md:pt-5 sm:pr-20 text-sm sm:text-lg font-light text-white">
+            <p className="pt-5 sm:pr-20 text-sm sm:text-lg font-light text-white">
               {content}
             </p>
 
-            <div className="mt-2 md:mt-20">
+            <div className="mt-8 md:mt-20">
               <button className="py-3 md:px-9 px-3 font-sans md:text-base text-xs rounded text-white bg-gradient-to-b from-yellow-400 to-yellow-200 shadow-2xl transform hover:scale-110 motion-reduce:transform-none">
                 {cta}
               </button>
             </div>
           </div>
-          <div className="md:flex-auto w-full h-full">
+          <div className="md:flex w-full h-full hidden md:block">
             <img
               alt="image"
               src={src}

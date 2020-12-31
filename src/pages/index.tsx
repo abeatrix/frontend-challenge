@@ -10,10 +10,10 @@ export default function Home({ data }) {
   }, []);
 
   return (
-    <div className="flex-col w-full h-screen">
+    <div className="flex-col min-w-min w-full h-full">
       <Header/>
       {fetched ? (
-        <div className="flex w-full items-center justify-center bg-black">
+        <div className="flex min-w-min w-full items-center justify-center bg-black">
           <Hero
             header={data.header}
             content={data.content}

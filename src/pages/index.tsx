@@ -1,21 +1,11 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Hero from "../components/Hero";
 
-export default function Home() {
+export default function Home({data}) {
   const [fetched, setFetched] = useState(false);
-  const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("./api/cms")
-      .then((response) => {
-        setData(response.data), setFetched(true);
-      })
-      .catch((error) => {
-        console.error(error);
-        return Promise.reject(error);
-      });
+    data ? setFetched(true) : null
   }, []);
 
   return (
@@ -32,4 +22,13 @@ export default function Home() {
       )}
     </div>
   );
+
+}
+
+export async function getServerSideProps() {
+
+  const res = await fetch("https://andalwayscc-git-master.beatrix.vercel.app/api/cms")
+  const data = await res.json()
+
+  return { props: { data } }
 }

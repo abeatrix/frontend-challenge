@@ -1,34 +1,37 @@
 import React, { useState, useEffect } from "react";
 import Hero from "../components/Hero";
+import Header from "../components/Header";
 
-export default function Home({data}) {
+export default function Home({ data }) {
   const [fetched, setFetched] = useState(false);
 
   useEffect(() => {
-    data ? setFetched(true) : null
+    data ? setFetched(true) : null;
   }, []);
 
   return (
-    <div className="container flex items-center mx-auto justify-center">
+    <div className="flex-col w-full h-screen">
+      <Header/>
       {fetched ? (
-        <Hero
-          header={data.header}
-          content={data.content}
-          cta={data.cta}
-          src={data.src}
-        />
+        <div className="flex w-full items-center justify-center bg-black">
+          <Hero
+            header={data.header}
+            content={data.content}
+            cta={data.cta}
+            src={data.src}
+          />
+        </div>
       ) : (
         <p>loading...</p>
       )}
     </div>
   );
-
 }
 
 export async function getServerSideProps() {
+  const url = "https://andalwayscc-git-master.beatrix.vercel.app/";
+  const res = await fetch(url + "/api/cms");
+  const data = await res.json();
 
-  const res = await fetch("https://andalwayscc-git-master.beatrix.vercel.app/api/cms")
-  const data = await res.json()
-
-  return { props: { data } }
+  return { props: { data } };
 }

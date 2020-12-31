@@ -6,9 +6,9 @@ const Header = () => {
   return (
     <>
     { displayHeader ?
-    <div className="flex-col opacity-80 bg-header-bg bg-cover w-full bg-no-repeat h-auto p-60 items-center justify-center text-center">
-      <div className="text-5xl font-extrabold transform hover:scale-110 motion-reduce:transform-none">
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-500">
+    <div className="flex-col opacity-80 bg-header-bg bg-cover w-full bg-no-repeat h-auto p-32 sm:p-60 items-center justify-center text-center">
+      <div className="text-5xl font-extrabold transform hover:scale-110 motion-reduce:transform-none flex justify-center" >
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-500 ">
           We Found Your Stars
         </span>
       </div>
